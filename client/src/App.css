@@ -10,7 +10,10 @@ body {
   min-height: 100vh;
   padding: 1rem;
   transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg);
+  color: var(--text);
 }
+
 
 /* Theme Variables */
 .app.light {
