@@ -6,10 +6,14 @@ import AskQuestion from './pages/AskQuestion';
 import QuestionList from './pages/QuestionList';
 import QuestionDetail from './pages/QuestionDetail';
 import Profile from './pages/Profile';
+import ThemeProvider from './contexts/ThemeContext';
+import useTheme from './contexts/useTheme';
+import './App.css';
 
-function App() {
+function AppRoutes() {
+  const { darkMode } = useTheme();
   return (
-    <Router>
+    <div className={darkMode ? 'app dark' : 'app'}>
       <Navbar />
       <Routes>
         <Route path="/" element={<QuestionList />} />
@@ -19,7 +23,17 @@ function App() {
         <Route path="/questions/:id" element={<QuestionDetail />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </ThemeProvider>
   );
 }
 

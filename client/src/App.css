@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+  min-height: 100vh;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Theme Variables */
+.app.light {
+  --bg: #ffffff;
+  --text: #121212;
+  --nav-bg: #eeeeee;
+  --nav-text: #333;
+  --btn-bg: #121212;
+  --btn-text: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app.dark {
+  --bg: #121212;
+  --text: #eeeeee;
+  --nav-bg: #1e1e1e;
+  --nav-text: #ccc;
+  --btn-bg: #ffffff;
+  --btn-text: #121212;
 }
 
-.card {
-  padding: 2em;
+/* Navbar */
+nav {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.read-the-docs {
-  color: #888;
+nav a {
+  color: var(--nav-text);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav button {
+  padding: 0.5rem 1rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  opacity: 0.9;
+}
+
+/* Search & Filter */
+.filter-bar {
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.filter-bar input[type="text"],
+.filter-bar select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.filter-bar input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.filter-bar label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
 }

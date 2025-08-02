@@ -1,0 +1,132 @@
+/* QuestionList.css */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.filter-bar input[type="text"],
+.filter-bar select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.ask-button {
+  padding: 0.5rem 1rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ask-button:hover {
+  background-color: darkgreen;
+}
+
+.question-box {
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #4caf50;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+.status-label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+}
+
+.status-label.open {
+  background-color: #ff9900;
+  color: white;
+}
+
+.status-label.closed {
+  background-color: gray;
+  color: white;
+}
+
+.question-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: var(--text);
+  display: block;
+  text-decoration: none;
+}
+
+.question-title:hover {
+  text-decoration: underline;
+}
+
+.posted-by {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.question-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.vote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e2e2e;
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.vote-box button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.answer-count {
+  background-color: #444;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #0f0;
+}
